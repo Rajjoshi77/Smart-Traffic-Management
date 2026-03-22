@@ -2,7 +2,7 @@ import os
 import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import LabelEncoder
-from sklearn.ensemble import RandomForestClassifier
+from sklearn.ensemble import RandomForestRegressor
 import joblib
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -53,8 +53,9 @@ X_train, X_test, y_train, y_test = train_test_split(
 )
 
 
-model = RandomForestClassifier(
-    n_estimators=100,
+model = RandomForestRegressor(
+    n_estimators=50,
+    max_depth=10,
     random_state=42
 )
 

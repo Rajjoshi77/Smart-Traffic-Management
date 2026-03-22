@@ -17,6 +17,7 @@ Thumbs.db
 
 # ML models
 *.pkl
+!backend/models/*.pkl
 ai_model/*.pkl
 ai_model/traffic_model.pkl
 
