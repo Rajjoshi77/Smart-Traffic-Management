@@ -1,0 +1,15 @@
+fastapi
+uvicorn
+pandas
+numpy
+scikit-learn
+joblib
+python-multipart
+requests
+pydantic
+kafka-python
+pyspark
+motor
+websockets
+pymongo
+python-dotenv

@@ -1,0 +1,175 @@
+@import "tailwindcss";
+
+/* =====================
+   COLOR PALETTE
+===================== */
+:root {
+  /* Primary - Professional Corporate Blue/Indigo */
+  --primary-start: #4f46e5;
+  /* Indigo 600 */
+  --primary-end: #4338ca;
+  /* Indigo 700 */
+
+  /* Backgrounds */
+  --bg-main: #f8fafc;
+  /* Slate 50 */
+  --bg-card: #ffffff;
+  --bg-glass: rgba(255, 255, 255, 0.9);
+
+  /* Text */
+  --text-main: #0f172a;
+  /* Slate 900 */
+  --text-muted: #64748b;
+  /* Slate 500 */
+
+  /* Borders */
+  --border-light: #e2e8f0;
+  /* Slate 200 */
+  --border-subtle: #f1f5f9;
+  /* Slate 100 */
+}
+
+html.dark {
+  /* Backgrounds */
+  --bg-main: #0f172a;
+  /* Slate 900 */
+  --bg-card: #1e293b;
+  /* Slate 800 */
+  --bg-glass: rgba(30, 41, 59, 0.9);
+
+  /* Text */
+  --text-main: #f1f5f9;
+  /* Slate 100 */
+  --text-muted: #94a3b8;
+  /* Slate 400 */
+
+  /* Borders */
+  --border-light: #334155;
+  /* Slate 700 */
+  --border-subtle: #1e293b;
+  /* Slate 800 */
+}
+
+/* =====================
+   BASE
+===================== */
+body {
+  background-color: var(--bg-main);
+  /* Removed heavy gradients for a cleaner look */
+  color: var(--text-main);
+  font-family: 'Inter', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* =====================
+   TYPOGRAPHY
+===================== */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+  letter-spacing: -0.025em;
+}
+
+h1 {
+  @apply text-3xl font-bold text-slate-900 dark:text-white tracking-tight;
+  /* Removed gradient text for better readability */
+}
+
+@media (min-width: 768px) {
+  h1 {
+    @apply text-4xl;
+  }
+}
+
+/* =====================
+   UTILITIES & COMPONENTS
+===================== */
+
+/* Clean Card Panel (Formerly Glass) */
+.glass-panel {
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  border-radius: 1rem;
+  /* xl */
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
+  /* shadow-sm */
+  /* backdrop-filter removed for performance and cleaner look on non-overlay elements */
+}
+
+/* Navigation Clean */
+.nav-glass {
+  background: var(--bg-card);
+  border-bottom: 1px solid var(--border-light);
+  /* slight transparency for sticky header is fine */
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(8px);
+}
+
+html.dark .nav-glass {
+  background: rgba(15, 23, 42, 0.95);
+}
+
+/* Inputs */
+.input-pretty {
+  @apply w-full px-4 py-2.5 rounded-lg outline-none transition-all duration-200;
+  background: var(--bg-main);
+  border: 1px solid var(--border-light);
+  color: var(--text-main);
+}
+
+.input-pretty:focus {
+  border-color: var(--primary-start);
+  box-shadow: 0 0 0 2px rgba(79, 70, 229, 0.1);
+  /* thinner ring */
+  background: var(--bg-card);
+}
+
+/* Buttons */
+.btn-gradient {
+  background: linear-gradient(135deg, var(--primary-start), var(--primary-end));
+  @apply text-white font-semibold px-6 py-3 rounded-xl shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300 active:scale-95;
+  box-shadow: 0 10px 20px -10px rgba(99, 102, 241, 0.5);
+}
+
+.btn-gradient:hover {
+  box-shadow: 0 15px 25px -10px rgba(99, 102, 241, 0.6);
+}
+
+/* Card Hover Effect */
+.hover-card {
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.hover-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.1);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border-subtle);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-muted);
+}

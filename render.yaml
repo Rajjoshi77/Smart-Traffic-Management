@@ -1,0 +1,19 @@
+# Sample Render service configuration (edit and fill env values before use)
+# For details: https://render.com/docs/render-manifest
+
+services:
+  - type: web
+    name: traffic-backend
+    env: docker
+    dockerfilePath: backend/Dockerfile
+    plan: free
+    # envVars can be set here or via the Render dashboard
+    envVars:
+      - key: MONGO_URI
+        value: ""
+      - key: WEATHER_API_KEY
+        value: ""
+      - key: KAFKA_BOOTSTRAP_SERVERS
+        value: "localhost:9092"
+      - key: SPARK_MASTER
+        value: "local[*]"
