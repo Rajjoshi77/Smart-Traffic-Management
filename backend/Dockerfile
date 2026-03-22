@@ -5,10 +5,10 @@ WORKDIR /app
 # Install system deps for common Python packages
 RUN apt-get update && apt-get install -y build-essential gcc && rm -rf /var/lib/apt/lists/*
 
-COPY requirements.txt /app/requirements.txt
+COPY backend/requirements.txt /app/requirements.txt
 RUN pip install --no-cache-dir -r requirements.txt
 
-COPY . /app
+COPY backend /app
 
 ENV PORT=8000
 EXPOSE 8000
