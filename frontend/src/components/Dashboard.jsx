@@ -21,7 +21,8 @@ export default function Dashboard() {
     // connect to WebSocket
     const connectWs = () => {
       // Use environment variable or default to localhost
-      const wsUrl = "ws://localhost:8000/ws/traffic";
+      const baseUrl = import.meta.env.VITE_API_URL || "http://localhost:8000";
+      const wsUrl = baseUrl.replace(/^http/, 'ws') + "/ws/traffic";
       ws.current = new WebSocket(wsUrl);
 
       ws.current.onopen = () => {
