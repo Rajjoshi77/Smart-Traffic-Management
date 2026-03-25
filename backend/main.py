@@ -11,6 +11,7 @@ from services.weather_services import fetch_weather_for_datetime
 from services.spark_services import get_peak_hours
 from database import db
 from config import config
+from producer import get_traffic_data
 
 class ConnectionManager:
     def __init__(self):
@@ -34,9 +35,25 @@ manager = ConnectionManager()
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     await db.connect()
-    task = asyncio.create_task(broadcast_traffic_updates())
+    task1 = asyncio.create_task(broadcast_traffic_updates())
+    task2 = asyncio.create_task(simulate_live_traffic())
     yield
     await db.close()
+
+async def simulate_live_traffic():
+    """
+    Internal background task to simulate traffic data.
+    This saves you from needing a paid Background Worker on Render!
+    """
+    while True:
+        try:
+            if db.client:
+                data = get_traffic_data()
+                await db.get_db().live_traffic.insert_one(data)
+                print(f"[Internal Producer] Saved: {data['sensor_id']} | Count: {data['vehicle_count']}")
+        except Exception as e:
+            print(f"Internal Producer error: {e}")
+        await asyncio.sleep(3)
 
 async def broadcast_traffic_updates():
     """
