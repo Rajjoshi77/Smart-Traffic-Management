@@ -117,13 +117,13 @@ export default function PredictForm({ setTrafficLevel }) {
             <label className="flex items-center gap-2 text-sm font-bold text-slate-700 dark:text-slate-300">
               <Calendar size={16} /> Date
             </label>
-            <input name="date" type="date" required className="input-pretty w-full" />
+            <input name="date" type="date" required className="w-full px-4 py-3 rounded-xl border border-slate-300 dark:border-slate-600 bg-white/50 dark:bg-slate-800/50 backdrop-blur-sm focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none transition-all text-slate-900 dark:text-white" />
           </div>
           <div className="space-y-3">
             <label className="flex items-center gap-2 text-sm font-bold text-slate-700 dark:text-slate-300">
               <Clock size={16} /> Hour (0-23)
             </label>
-            <input name="hour" type="number" min="0" max="23" placeholder="e.g. 14" required className="input-pretty w-full" />
+            <input name="hour" type="number" min="0" max="23" placeholder="e.g. 14" required className="w-full px-4 py-3 rounded-xl border border-slate-300 dark:border-slate-600 bg-white/50 dark:bg-slate-800/50 backdrop-blur-sm focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none transition-all text-slate-900 dark:text-white" />
           </div>
         </div>
 

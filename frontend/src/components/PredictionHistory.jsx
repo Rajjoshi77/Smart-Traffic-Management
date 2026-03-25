@@ -89,7 +89,7 @@ export default function PredictionHistory() {
       </div>
 
       {/* Controls */}
-      <div className="glass rounded-2xl p-6 shadow-lg space-y-4">
+      <div className="glass-panel p-6 space-y-4">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
           {/* Search */}
           <div>
@@ -101,7 +101,7 @@ export default function PredictionHistory() {
               placeholder="e.g., Clear, Rain..."
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
-              className="input w-full"
+              className="w-full px-4 py-2 rounded-xl border border-slate-300 dark:border-slate-600 bg-white/50 dark:bg-slate-800/50 backdrop-blur-sm focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none transition-all text-black dark:text-white"
             />
           </div>
 
@@ -113,7 +113,7 @@ export default function PredictionHistory() {
             <select
               value={filterLevel}
               onChange={(e) => setFilterLevel(e.target.value)}
-              className="input w-full"
+              className="w-full px-4 py-2 rounded-xl border border-slate-300 dark:border-slate-600 bg-white/50 dark:bg-slate-800/50 backdrop-blur-sm focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none transition-all text-black dark:text-white"
             >
               <option value="all">All Levels</option>
               <option value="low traffic">Low Traffic</option>
@@ -130,7 +130,7 @@ export default function PredictionHistory() {
             <select
               value={sortBy}
               onChange={(e) => setSortBy(e.target.value)}
-              className="input w-full"
+              className="w-full px-4 py-2 rounded-xl border border-slate-300 dark:border-slate-600 bg-white/50 dark:bg-slate-800/50 backdrop-blur-sm focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none transition-all text-black dark:text-white"
             >
               <option value="date">Latest First</option>
               <option value="volume">Traffic Volume</option>
@@ -152,7 +152,7 @@ export default function PredictionHistory() {
 
       {/* History Table */}
       {filteredHistory.length > 0 ? (
-        <div className="glass rounded-2xl shadow-lg overflow-hidden">
+        <div className="glass-panel overflow-hidden">
           <div className="overflow-x-auto">
             <table className="w-full">
               <thead className="bg-gradient-to-r from-blue-600 to-blue-800 dark:from-blue-700 dark:to-blue-900">
@@ -208,7 +208,7 @@ export default function PredictionHistory() {
           </div>
         </div>
       ) : (
-        <div className="glass rounded-2xl p-12 text-center shadow-lg">
+        <div className="glass-panel p-12 text-center">
           <div className="text-5xl mb-4">📜</div>
           <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">No Predictions Yet</h3>
           <p className="text-gray-600 dark:text-gray-400">

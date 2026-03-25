@@ -27,7 +27,6 @@ export default function Navigation({
     { id: "history", label: "History", icon: History },
     { id: "analytics", label: "Analytics", icon: BarChart },
     { id: "documentation", label: "Docs", icon: BookOpen },
-    { id: "api", label: "API", icon: Code2 },
     { id: "support", label: "Support", icon: LifeBuoy },
   ];
 
@@ -46,7 +45,7 @@ export default function Navigation({
                 <Activity size={20} className="relative z-10" />
                 <div className="absolute inset-0 rounded-xl bg-white opacity-20 group-hover:opacity-30 transition-opacity" />
               </div>
-              <span className="text-xl font-bold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-slate-800 to-slate-600 dark:from-white dark:to-slate-300">
+              <span className="text-xl font-bold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-black to-gray-700 dark:from-white dark:to-slate-300">
                 TrafficIQ
               </span>
             </div>
