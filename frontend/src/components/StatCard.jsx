@@ -16,11 +16,6 @@ export default function StatCard({ icon, label, value, unit, square, delay = "0s
           <div className="p-3 rounded-xl bg-slate-100/80 dark:bg-slate-800/80 text-indigo-600 dark:text-indigo-400 shadow-inner border border-white/20 dark:border-white/5 group-hover:scale-110 transition-transform duration-300">
             <span className="text-2xl">{icon}</span>
           </div>
-          {trendingUp !== null && (
-            <div className={`px-2 py-1 rounded-md text-[10px] font-bold ${trendingUp ? 'bg-emerald-100 text-emerald-700 dark:bg-emerald-900/40 dark:text-emerald-400' : 'bg-red-100 text-red-700 dark:bg-red-900/40 dark:text-red-400'}`}>
-              {trendingUp ? '▲ +12%' : '▼ -4%'}
-            </div>
-          )}
         </div>
 
         <div>
