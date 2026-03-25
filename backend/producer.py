@@ -8,9 +8,13 @@ import sys
 import os
 
 
-sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-
-from backend.config import config
+try:
+    # Works in Docker where contents of backend/ are in /app
+    from config import config
+except ImportError:
+    # Works in local execution from root directory
+    sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+    from backend.config import config
 try:
     from pymongo import MongoClient
 except ImportError:
