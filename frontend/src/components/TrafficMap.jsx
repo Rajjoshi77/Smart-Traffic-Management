@@ -13,6 +13,7 @@ import "leaflet-routing-machine";
 import L from "leaflet";
 import { RotateCcw } from "lucide-react";
 import CarSpinner from "./CarSpinner";
+import { predictTraffic } from "../services/api";
 
 /* ================= ICON FIX ================= */
 delete L.Icon.Default.prototype._getIconUrl;
@@ -101,9 +102,11 @@ function RouteOnRoad({ points, trafficLevel }) {
 }
 
 /* ================= MAIN COMPONENT ================= */
-export default function TrafficMap({ trafficLevel, trafficData = [] }) {
+export default function TrafficMap({ trafficLevel, trafficData = [], predictParams }) {
   const [position, setPosition] = useState(null);
   const [points, setPoints] = useState([]);
+  const [pathTraffic, setPathTraffic] = useState(null);
+  const [isPredicting, setIsPredicting] = useState(false);
 
   /* LIVE LOCATION */
   useEffect(() => {
@@ -124,11 +127,49 @@ export default function TrafficMap({ trafficLevel, trafficData = [] }) {
   }, []);
 
   /* HANDLE MAP CLICKS */
-  const handleMapClick = (latlng) => {
+  const handleMapClick = async (latlng) => {
     if (points.length < 2) {
-      setPoints([...points, latlng]);
+      const newPoints = [...points, latlng];
+      setPoints(newPoints);
+
+      // Trigger Prediction when path is set
+      if (newPoints.length === 2) {
+        setIsPredicting(true);
+        try {
+          const now = new Date();
+          const payload = {
+            date: predictParams?.date ? predictParams.date : now.toISOString().split("T")[0],
+            hour: (predictParams?.hour !== undefined && predictParams.hour !== "") ? Number(predictParams.hour) : now.getHours(),
+            holiday: "None",
+            rain_1h: 0,
+            snow_1h: 0,
+            clouds_all: 0,
+            lat: newPoints[0].lat,
+            lon: newPoints[0].lng,
+          };
+          const res = await predictTraffic(payload);
+          setPathTraffic(res.data.traffic_level);
+        } catch (err) {
+          console.error("Traffic map routing prediction failed:", err);
+        } finally {
+          setIsPredicting(false);
+        }
+      }
     }
   };
+
+  const resetMapRoute = () => {
+    setPoints([]);
+    setPathTraffic(null);
+  };
+
+  // Whenever the user hits "Run Prediction" on the dashboard form, 
+  // dynamically update the map route to reflect their new requested prediction.
+  useEffect(() => {
+    if (points.length === 2 && trafficLevel) {
+      setPathTraffic(trafficLevel);
+    }
+  }, [trafficLevel]);
 
   const getMarkerColor = (level) => {
     if (level === "Low") return "hue-rotate-[240deg]"; // Blueish
@@ -152,7 +193,7 @@ export default function TrafficMap({ trafficLevel, trafficData = [] }) {
           <p className="text-sm text-slate-500">Real-time sensor data & Routing</p>
         </div>
         <button
-          onClick={() => setPoints([])}
+          onClick={resetMapRoute}
           className="px-4 py-2 rounded-xl bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-200 border border-slate-200 dark:border-slate-700 font-semibold hover:bg-slate-50 dark:hover:bg-slate-700 transition-all flex items-center gap-2 shadow-sm"
         >
           <RotateCcw size={16} /> Reset Route
@@ -231,12 +272,31 @@ export default function TrafficMap({ trafficLevel, trafficData = [] }) {
           )}
 
           {/* Route */}
-          <RouteOnRoad points={points} trafficLevel={trafficLevel} />
+          <RouteOnRoad points={points} trafficLevel={pathTraffic || trafficLevel} />
         </MapContainer>
 
         {/* Overlay Gradients */}
         <div className="absolute inset-x-0 top-0 h-8 bg-gradient-to-b from-black/20 to-transparent pointer-events-none z-[400]" />
         <div className="absolute inset-x-0 bottom-0 h-8 bg-gradient-to-t from-black/20 to-transparent pointer-events-none z-[400]" />
+
+        {/* Active Path Prediction Status Overlay */}
+        {points.length === 2 && (
+          <div className="absolute top-4 left-1/2 -translate-x-1/2 z-[500] glass-popup px-6 py-3 rounded-full flex items-center gap-3 shadow-xl">
+            {isPredicting ? (
+              <>
+                <div className="w-5 h-5 border-2 border-indigo-500 border-t-transparent rounded-full animate-spin" />
+                <span className="font-bold text-slate-700 dark:text-slate-200">Analyzing route traffic...</span>
+              </>
+            ) : pathTraffic ? (
+              <>
+                <span className={`w-3 h-3 rounded-full ${pathTraffic === "High Traffic" ? "bg-rose-500 shadow-[0_0_8px_rgba(244,63,94,0.6)]" : pathTraffic === "Medium Traffic" ? "bg-amber-500 shadow-[0_0_8px_rgba(245,158,11,0.6)]" : "bg-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.6)]"} animate-pulse`} />
+                <span className="font-bold text-slate-700 dark:text-slate-200">
+                  Route Status: <span className={pathTraffic === "High Traffic" ? "text-rose-500" : pathTraffic === "Medium Traffic" ? "text-amber-500" : "text-emerald-500"}>{pathTraffic}</span>
+                </span>
+              </>
+            ) : null}
+          </div>
+        )}
       </div>
 
       {/* Legend */}

@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { predictTraffic } from "../services/api";
 import { Calendar, Clock, CloudRain, MapPin, Navigation } from "lucide-react";
 
-export default function PredictForm({ setTrafficLevel }) {
+export default function PredictForm({ setTrafficLevel, predictParams, setPredictParams }) {
   const [result, setResult] = useState(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
@@ -117,13 +117,13 @@ export default function PredictForm({ setTrafficLevel }) {
             <label className="flex items-center gap-2 text-sm font-bold text-slate-700 dark:text-slate-300">
               <Calendar size={16} /> Date
             </label>
-            <input name="date" type="date" min={new Date().toISOString().split("T")[0]} required className="w-full px-4 py-3 rounded-xl border border-slate-300 dark:border-slate-600 bg-white/50 dark:bg-slate-800/50 backdrop-blur-sm focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none transition-all text-slate-900 dark:text-white" />
+            <input value={predictParams?.date || ""} onChange={e => setPredictParams(p => ({ ...p, date: e.target.value }))} name="date" type="date" min={new Date().toISOString().split("T")[0]} required className="w-full px-4 py-3 rounded-xl border border-slate-300 dark:border-slate-600 bg-white/50 dark:bg-slate-800/50 backdrop-blur-sm focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none transition-all text-slate-900 dark:text-white" />
           </div>
           <div className="space-y-3">
             <label className="flex items-center gap-2 text-sm font-bold text-slate-700 dark:text-slate-300">
               <Clock size={16} /> Hour (0-23)
             </label>
-            <input name="hour" type="number" min="0" max="23" placeholder="e.g. 14" required className="w-full px-4 py-3 rounded-xl border border-slate-300 dark:border-slate-600 bg-white/50 dark:bg-slate-800/50 backdrop-blur-sm focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none transition-all text-slate-900 dark:text-white" />
+            <input value={predictParams?.hour !== undefined ? predictParams.hour : ""} onChange={e => setPredictParams(p => ({ ...p, hour: e.target.value }))} name="hour" type="number" min="0" max="23" placeholder="e.g. 14" required className="w-full px-4 py-3 rounded-xl border border-slate-300 dark:border-slate-600 bg-white/50 dark:bg-slate-800/50 backdrop-blur-sm focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none transition-all text-slate-900 dark:text-white" />
           </div>
         </div>
 

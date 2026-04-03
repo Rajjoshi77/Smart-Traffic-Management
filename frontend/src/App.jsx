@@ -13,13 +13,15 @@ import Support from "./components/Support";
 
 export default function App() {
   const [trafficLevel, setTrafficLevel] = useState("Low Traffic");
+  const [predictParams, setPredictParams] = useState({
+    date: new Date().toISOString().split("T")[0],
+    hour: new Date().getHours()
+  });
   const [darkMode, setDarkMode] = useState(() => {
-    // Check localStorage for saved preference
     return localStorage.getItem("darkMode") === "true";
   });
   const [currentPage, setCurrentPage] = useState("dashboard");
 
-  // Save dark mode preference
   useEffect(() => {
     localStorage.setItem("darkMode", darkMode);
   }, [darkMode]);
@@ -29,7 +31,6 @@ export default function App() {
     document.documentElement.classList.toggle("dark");
   };
 
-  // Apply dark mode on mount
   useEffect(() => {
     if (darkMode) {
       document.documentElement.classList.add("dark");
@@ -50,11 +51,13 @@ export default function App() {
             <div className="mb-10">
               <h1 className="text-4xl font-bold text-glow outfit-font">Traffic Prediction</h1>
             </div>
-            <PredictForm setTrafficLevel={setTrafficLevel} />
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              <div className="glass-panel p-8 animate-fadeInUp" style={{ animationDelay: "0.1s" }}>
-                <TrafficMap trafficLevel={trafficLevel} />
-              </div>
+            <PredictForm 
+              setTrafficLevel={setTrafficLevel} 
+              predictParams={predictParams} 
+              setPredictParams={setPredictParams} 
+            />
+            <div className="glass-panel p-8 animate-fadeInUp" style={{ animationDelay: "0.1s" }}>
+              <TrafficMap trafficLevel={trafficLevel} predictParams={predictParams} />
             </div>
           </div>
         );
