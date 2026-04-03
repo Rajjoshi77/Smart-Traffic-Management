@@ -30,7 +30,6 @@ df["weather_main"] = weather_encoder.fit_transform(df["weather_main"])
 holiday_encoder = LabelEncoder()
 df["holiday"] = holiday_encoder.fit_transform(df["holiday"])
 
-# ---------- FEATURES ----------
 X = df[
     [
         "hour",
@@ -54,9 +53,11 @@ X_train, X_test, y_train, y_test = train_test_split(
 
 
 model = RandomForestRegressor(
-    n_estimators=50,
-    max_depth=10,
-    random_state=42
+    n_estimators=200,
+    max_depth=25,
+    min_samples_split=5,
+    random_state=42,
+    n_jobs=-1
 )
 
 model.fit(X_train, y_train)

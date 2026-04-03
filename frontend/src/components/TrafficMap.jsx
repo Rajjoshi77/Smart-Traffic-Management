@@ -12,6 +12,7 @@ import "leaflet/dist/leaflet.css";
 import "leaflet-routing-machine";
 import L from "leaflet";
 import { RotateCcw } from "lucide-react";
+import CarSpinner from "./CarSpinner";
 
 /* ================= ICON FIX ================= */
 delete L.Icon.Default.prototype._getIconUrl;
@@ -24,33 +25,22 @@ L.Icon.Default.mergeOptions({
     "https://unpkg.com/leaflet@1.9.4/dist/images/marker-shadow.png",
 });
 
-/* ================= CUSTOM ICONS ================= */
-const userIcon = new L.Icon({
-  iconUrl:
-    "https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-blue.png",
-  shadowUrl:
-    "https://unpkg.com/leaflet@1.9.4/dist/images/marker-shadow.png",
-  iconSize: [30, 45],
-  iconAnchor: [15, 45],
-});
+const createMapIcon = (imgName) => {
+  return new L.DivIcon({
+    html: `<div style="display: flex; align-items: center; justify-content: center; width: 60px; height: 60px;">
+             <img src="/${imgName}" style="width: 100%; height: 100%; object-fit: contain; filter: drop-shadow(0 4px 4px rgba(0,0,0,0.4));" />
+           </div>`,
+    className: 'custom-car-marker bg-transparent border-none',
+    iconSize: [60, 60],
+    iconAnchor: [30, 30],
+    popupAnchor: [0, -30],
+  });
+};
 
-const startIcon = new L.Icon({
-  iconUrl:
-    "https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-red.png",
-  shadowUrl:
-    "https://unpkg.com/leaflet@1.9.4/dist/images/marker-shadow.png",
-  iconSize: [30, 45],
-  iconAnchor: [15, 45],
-});
-
-const endIcon = new L.Icon({
-  iconUrl:
-    "https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-green.png",
-  shadowUrl:
-    "https://unpkg.com/leaflet@1.9.4/dist/images/marker-shadow.png",
-  iconSize: [30, 45],
-  iconAnchor: [15, 45],
-});
+const userIcon = createMapIcon('car-user.png');
+const startIcon = createMapIcon('car-red.png'); // High Traffic
+const endIcon = createMapIcon('car-yellow.png'); // Low Traffic
+const midIcon = createMapIcon('car-yellow.png'); // Medium Traffic
 
 /* ================= AUTO ZOOM TO USER ================= */
 function FlyToUser({ position }) {
@@ -152,11 +142,7 @@ export default function TrafficMap({ trafficLevel, trafficData = [] }) {
   if (!position) {
     return (
       <div className="flex flex-col items-center justify-center h-96 glass-panel rounded-3xl">
-        <div className="relative w-16 h-16">
-          <div className="absolute top-0 left-0 w-full h-full border-4 border-indigo-200 rounded-full opacity-25"></div>
-          <div className="absolute top-0 left-0 w-full h-full border-4 border-indigo-600 rounded-full border-t-transparent animate-spin"></div>
-        </div>
-        <p className="mt-4 font-medium text-slate-500">Acquiring satellite lock...</p>
+        <CarSpinner text="Acquiring satellite lock..." />
       </div>
     );
   }
@@ -207,7 +193,7 @@ export default function TrafficMap({ trafficLevel, trafficData = [] }) {
               position={[sensor.location.lat, sensor.location.lon]}
               // We reuse startIcon but realistically should use custom colored icons
               // For now, let's use the default icon but maybe add a popup with details
-              icon={sensor.congestion_level === "High" ? startIcon : (sensor.congestion_level === "Medium" ? endIcon : userIcon)}
+              icon={sensor.congestion_level === "High" ? startIcon : (sensor.congestion_level === "Medium" ? midIcon : endIcon)}
             >
               <Popup>
                 <div className="p-2 min-w-[150px]">

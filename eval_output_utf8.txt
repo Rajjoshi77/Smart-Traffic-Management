@@ -1,0 +1,34 @@
+﻿Loading data and models...
+Predicting traffic volume...
+
+========================================
+Regression Metrics:
+R2 Score: 0.9456
+MAE: 263.93
+RMSE: 463.82
+========================================
+
+Classification Metrics:
+Accuracy: 0.9068
+Precision (Weighted): 0.9048
+Recall (Weighted): 0.9068
+F1 Score (Weighted): 0.9044
+
+Classification Report:
+              precision    recall  f1-score   support
+
+         Low       0.94      0.94      0.94      4260
+      Medium       0.89      0.92      0.91      4679
+        High       0.79      0.58      0.67       702
+
+    accuracy                           0.91      9641
+   macro avg       0.87      0.82      0.84      9641
+weighted avg       0.90      0.91      0.90      9641
+
+
+Confusion Matrix:
+[[4014  241    5]
+ [ 257 4321  101]
+ [   0  295  407]]
+
+Confusion matrix saved at D:\resume project\AI_Big_Cloud_Project\Smart-Traffic-Managment\confusion_matrix.png

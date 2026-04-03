@@ -152,3 +152,43 @@ html.dark .nav-glass {
   transform: translateY(-2px);
   background: linear-gradient(135deg, #4338ca, #2563eb);
 }
+
+/* =====================
+   LEAFLET MAP DARK MODE FIXES
+===================== */
+html.dark .leaflet-routing-container {
+  background-color: var(--bg-card) !important;
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+  border: 1px solid var(--border-light) !important;
+  color: var(--text-main) !important;
+  border-radius: 0.75rem !important;
+  padding: 0.5rem !important;
+  margin-top: 10px !important;
+}
+
+html.dark .leaflet-routing-alt {
+  background-color: transparent !important;
+  color: var(--text-main) !important;
+}
+
+html.dark .leaflet-routing-alt table {
+  color: var(--text-main) !important;
+}
+
+html.dark .leaflet-routing-alt td {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+  color: var(--text-main) !important;
+}
+
+html.dark .leaflet-routing-alt tr:hover {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+html.dark .leaflet-popup-content-wrapper,
+html.dark .leaflet-popup-tip {
+  background-color: var(--bg-card) !important;
+  color: var(--text-main) !important;
+  backdrop-filter: blur(8px) !important;
+  border: 1px solid var(--border-light) !important;
+}

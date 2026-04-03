@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { fetchPeakHours } from "../services/api";
 
 import { RefreshCw } from "lucide-react";
+import CarSpinner from "./CarSpinner";
 
 export default function PeakHours() {
   const [hours, setHours] = useState([]);
@@ -36,7 +37,7 @@ export default function PeakHours() {
   if (loading && !hours.length) {
     return (
       <div className="flex items-center justify-center h-64">
-        <div className="w-8 h-8 border-4 border-indigo-500 border-t-transparent rounded-full animate-spin"></div>
+        <CarSpinner />
       </div>
     );
   }

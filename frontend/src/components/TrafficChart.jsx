@@ -10,6 +10,7 @@ import {
 } from "recharts";
 import { fetchPeakHours } from "../services/api";
 import { RefreshCw } from "lucide-react";
+import CarSpinner from "./CarSpinner";
 
 // Modified to accept liveData prop
 export default function TrafficChart({ liveData = [] }) {
@@ -83,7 +84,7 @@ export default function TrafficChart({ liveData = [] }) {
   if (loading && !data.length) {
     return (
       <div className="flex items-center justify-center h-64">
-        <div className="w-8 h-8 border-4 border-indigo-500 border-t-transparent rounded-full animate-spin"></div>
+        <CarSpinner />
       </div>
     );
   }
