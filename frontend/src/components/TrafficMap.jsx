@@ -42,10 +42,9 @@ const startIcon = createMapIcon('car-red.png'); // High Traffic
 const endIcon = createMapIcon('car-yellow.png'); // Low Traffic
 const midIcon = createMapIcon('car-yellow.png'); // Medium Traffic
 
-/* ================= AUTO ZOOM TO USER ================= */
+
 function FlyToUser({ position }) {
   const map = useMap();
-
   useEffect(() => {
     if (position) {
       map.flyTo(position, 15, {
@@ -58,7 +57,6 @@ function FlyToUser({ position }) {
   return null;
 }
 
-/* ================= MAP CLICK HANDLER ================= */
 function MapClickHandler({ onClick }) {
   useMapEvents({
     click(e) {
@@ -68,7 +66,6 @@ function MapClickHandler({ onClick }) {
   return null;
 }
 
-/* ================= ROUTING (ROAD FOLLOWING) ================= */
 function RouteOnRoad({ points, trafficLevel }) {
   const map = useMap();
 

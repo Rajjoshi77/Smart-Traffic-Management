@@ -117,7 +117,7 @@ export default function PredictForm({ setTrafficLevel }) {
             <label className="flex items-center gap-2 text-sm font-bold text-slate-700 dark:text-slate-300">
               <Calendar size={16} /> Date
             </label>
-            <input name="date" type="date" required className="w-full px-4 py-3 rounded-xl border border-slate-300 dark:border-slate-600 bg-white/50 dark:bg-slate-800/50 backdrop-blur-sm focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none transition-all text-slate-900 dark:text-white" />
+            <input name="date" type="date" min={new Date().toISOString().split("T")[0]} required className="w-full px-4 py-3 rounded-xl border border-slate-300 dark:border-slate-600 bg-white/50 dark:bg-slate-800/50 backdrop-blur-sm focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none transition-all text-slate-900 dark:text-white" />
           </div>
           <div className="space-y-3">
             <label className="flex items-center gap-2 text-sm font-bold text-slate-700 dark:text-slate-300">
