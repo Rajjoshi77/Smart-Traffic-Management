@@ -24,7 +24,8 @@ ai_model/traffic_model.pkl
 # Data & Spark outputs
 Data/
 big_data/
-backend/data/
+backend/data/*
+!backend/data/hdfs_analytics/
 spark/data/
 
 # Generated Documentation
