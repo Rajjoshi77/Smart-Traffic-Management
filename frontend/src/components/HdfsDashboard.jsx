@@ -6,7 +6,8 @@ import {
   ResponsiveContainer, Cell, PieChart, Pie
 } from "recharts";
 
-const API = "http://localhost:8000/api/hdfs";
+const baseUrl = import.meta.env.VITE_API_URL || "http://localhost:8000";
+const API = `${baseUrl}/api/hdfs`;
 
 // ─── colour helpers ──────────────────────────────────────────────────────────
 const HOUR_COLOR  = (val, max) => {
