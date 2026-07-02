@@ -26,3 +26,7 @@ Data/
 big_data/
 backend/data/
 spark/data/
+
+# Generated Documentation
+HDFS_*.md
+README_HDFS.md

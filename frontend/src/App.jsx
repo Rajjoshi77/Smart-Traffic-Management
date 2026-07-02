@@ -10,6 +10,7 @@ import PeakHours from "./components/PeakHours";
 import Documentation from "./components/Documentation";
 import ApiReference from "./components/ApiReference";
 import Support from "./components/Support";
+import HdfsDashboard from "./components/HdfsDashboard";
 
 export default function App() {
   const [trafficLevel, setTrafficLevel] = useState("Low Traffic");
@@ -63,6 +64,12 @@ export default function App() {
         );
       case "history":
         return <PredictionHistory />;
+      case "bigdata":
+        return (
+          <div className="min-h-screen p-4 md:p-8">
+            <HdfsDashboard />
+          </div>
+        );
       case "analytics":
         return <Analytics />;
       case "documentation":

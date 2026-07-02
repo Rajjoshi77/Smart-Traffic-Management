@@ -11,7 +11,6 @@ spark = (
 spark.sparkContext.setLogLevel("WARN")
 
 DATA_PATH = "data/big_traffic/parquet"
-
 BASE_OUTPUT = "data/analytics_results"
 
 print("Loading dataset...")
@@ -19,8 +18,9 @@ df = spark.read.parquet(DATA_PATH)
 
 print("Total rows:", df.count())
 
-
-print("Calculating Peak Hours...")
+print("\n=== DAG Visualization (Execution Plan) ===")
+df.explain(mode="extended")  # Shows logical and physical plans
+print("\nCalculating Peak Hours...")
 
 peak_hours = (
     df.groupBy("hour")
@@ -35,7 +35,6 @@ peak_hours.show()
 
 
 print("Calculating Top Sensors...")
-
 top_sensors = (
     df.groupBy("sensor_id")
       .agg(avg("traffic_volume").alias("avg_volume"))
@@ -48,7 +47,6 @@ top_sensors.show()
 
 
 print("Calculating Hourly Trend...")
-
 hourly_trend = (
     df.groupBy("hour")
       .agg(avg("traffic_volume").alias("avg_volume"))
@@ -60,7 +58,6 @@ hourly_trend.show()
 
 
 print("Classifying congestion levels...")
-
 df_with_congestion = df.withColumn(
     "congestion_level",
     when(col("traffic_volume") < 100, "Low")
@@ -90,9 +87,7 @@ weekday_weekend.write.mode("overwrite").json(f"{BASE_OUTPUT}/weekday_weekend")
 weekday_weekend.show()
 
 
-
 print("Finding busiest day...")
-
 busiest_day = (
     df.groupBy("day_of_week")
       .agg(avg("traffic_volume").alias("avg_volume"))
@@ -104,14 +99,17 @@ busiest_day.show()
 
 
 print("Detecting anomalies...")
-
 overall_avg = df.agg(avg("traffic_volume")).collect()[0][0]
 
 anomalies = df.filter(col("traffic_volume") > overall_avg * 2)
-
 anomalies.write.mode("overwrite").json(f"{BASE_OUTPUT}/anomalies")
 anomalies.show()
 
 
 print("All advanced analytics completed successfully!")
+
+# Keep Spark UI open for inspection
+print("Spark UI is running at http://localhost:4040. Press Enter to stop...")
+input()
+
 spark.stop()

@@ -12,6 +12,7 @@ from services.spark_services import get_peak_hours
 from database import db
 from config import config
 from producer import get_traffic_data
+from routes.hdfs_analytics import router as hdfs_router
 
 class ConnectionManager:
     def __init__(self):
@@ -107,6 +108,9 @@ app.add_middleware(
     allow_headers=["*"],
     allow_credentials=True,
 )
+
+# HDFS Analytics routes - serves pre-computed 1B-row results instantly
+app.include_router(hdfs_router)
 
 class PredictInput(BaseModel):
     date: str  # YYYY-MM-DD

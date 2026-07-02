@@ -11,6 +11,7 @@ import {
   BookOpen,
   Code2,
   LifeBuoy,
+  Database,
 } from "lucide-react";
 
 export default function Navigation({
@@ -23,11 +24,12 @@ export default function Navigation({
 
   const navItems = [
     { id: "dashboard", label: "Dashboard", icon: LayoutDashboard },
-    { id: "predict", label: "Predict", icon: Activity },
-    { id: "history", label: "History", icon: History },
+    { id: "predict",   label: "Predict",   icon: Activity },
+    { id: "history",   label: "History",   icon: History },
     { id: "analytics", label: "Analytics", icon: BarChart },
+    { id: "bigdata",   label: "Big Data",  icon: Database, badge: true },
     { id: "documentation", label: "Docs", icon: BookOpen },
-    { id: "support", label: "Support", icon: LifeBuoy },
+    { id: "support",   label: "Support",   icon: LifeBuoy },
   ];
 
   return (
@@ -52,7 +54,7 @@ export default function Navigation({
 
             {/* Desktop Nav */}
             <nav className="hidden md:flex items-center gap-1">
-              {navItems.map(({ id, label, icon: Icon }) => {
+              {navItems.map(({ id, label, icon: Icon, badge }) => {
                 const isActive = currentPage === id;
                 return (
                   <button
@@ -66,9 +68,13 @@ export default function Navigation({
                       }
                     `}
                   >
-                    {/* Icon - removed animate-pulse */}
                     <Icon size={18} />
                     {label}
+                    {badge && !isActive && (
+                      <span className="ml-1 px-1.5 py-0.5 text-[10px] font-bold rounded-full bg-gradient-to-r from-indigo-500 to-purple-600 text-white leading-none">
+                        NEW
+                      </span>
+                    )}
                   </button>
                 );
               })}

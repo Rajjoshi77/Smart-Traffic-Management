@@ -169,7 +169,7 @@ This project demonstrates:
 
 ## 📄 License
 
-Open source — use freely for learning/portfolio projects.
+Private and proprietary. All rights reserved. Not freely available.
 
 ---
 

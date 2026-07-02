@@ -15,8 +15,8 @@ OUTPUT_PATH = "data/big_traffic/parquet"
 
 print(" Generating large-scale traffic dataset...")
 
-ROWS = 30_000_000
-SENSORS = 5000
+ROWS = 30_000_000    #115_500_000_000 for 1TB
+SENSORS = 5000  
 
 df = spark.range(ROWS)
 df = df.withColumn("sensor_id", (rand() * SENSORS).cast("int"))
