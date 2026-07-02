@@ -1,0 +1,162 @@
+[
+  {
+    "sensor_id": 10105,
+    "location_id": 878,
+    "avg_volume": 9571.125,
+    "max_volume": 10918,
+    "avg_speed": 34.841249999999995,
+    "measurements": 8
+  },
+  {
+    "sensor_id": 5869,
+    "location_id": 458,
+    "avg_volume": 9432.857142857143,
+    "max_volume": 10808,
+    "avg_speed": 34.24142857142857,
+    "measurements": 7
+  },
+  {
+    "sensor_id": 17876,
+    "location_id": 1,
+    "avg_volume": 9383.75,
+    "max_volume": 10818,
+    "avg_speed": 34.85375,
+    "measurements": 8
+  },
+  {
+    "sensor_id": 2973,
+    "location_id": 39,
+    "avg_volume": 9019.642857142857,
+    "max_volume": 10900,
+    "avg_speed": 34.964999999999996,
+    "measurements": 14
+  },
+  {
+    "sensor_id": 14378,
+    "location_id": 719,
+    "avg_volume": 8872.90909090909,
+    "max_volume": 10812,
+    "avg_speed": 37.14090909090909,
+    "measurements": 11
+  },
+  {
+    "sensor_id": 11519,
+    "location_id": 600,
+    "avg_volume": 8722.0,
+    "max_volume": 10867,
+    "avg_speed": 40.464666666666666,
+    "measurements": 15
+  },
+  {
+    "sensor_id": 8261,
+    "location_id": 1300,
+    "avg_volume": 8709.142857142857,
+    "max_volume": 10500,
+    "avg_speed": 40.012857142857136,
+    "measurements": 14
+  },
+  {
+    "sensor_id": 8089,
+    "location_id": 619,
+    "avg_volume": 8704.5,
+    "max_volume": 10439,
+    "avg_speed": 33.428000000000004,
+    "measurements": 10
+  },
+  {
+    "sensor_id": 8830,
+    "location_id": 1882,
+    "avg_volume": 8703.25,
+    "max_volume": 10777,
+    "avg_speed": 33.36833333333333,
+    "measurements": 12
+  },
+  {
+    "sensor_id": 5030,
+    "location_id": 143,
+    "avg_volume": 8694.07142857143,
+    "max_volume": 10881,
+    "avg_speed": 34.57214285714286,
+    "measurements": 14
+  },
+  {
+    "sensor_id": 4189,
+    "location_id": 1299,
+    "avg_volume": 8673.875,
+    "max_volume": 10833,
+    "avg_speed": 37.6675,
+    "measurements": 16
+  },
+  {
+    "sensor_id": 8985,
+    "location_id": 369,
+    "avg_volume": 8665.181818181818,
+    "max_volume": 10908,
+    "avg_speed": 37.0190909090909,
+    "measurements": 11
+  },
+  {
+    "sensor_id": 2242,
+    "location_id": 906,
+    "avg_volume": 8662.0,
+    "max_volume": 10901,
+    "avg_speed": 41.54384615384616,
+    "measurements": 13
+  },
+  {
+    "sensor_id": 13574,
+    "location_id": 1626,
+    "avg_volume": 8650.5,
+    "max_volume": 10569,
+    "avg_speed": 39.468999999999994,
+    "measurements": 10
+  },
+  {
+    "sensor_id": 19473,
+    "location_id": 882,
+    "avg_volume": 8633.125,
+    "max_volume": 10834,
+    "avg_speed": 37.875,
+    "measurements": 8
+  },
+  {
+    "sensor_id": 12533,
+    "location_id": 1327,
+    "avg_volume": 8619.75,
+    "max_volume": 9813,
+    "avg_speed": 37.3925,
+    "measurements": 8
+  },
+  {
+    "sensor_id": 4724,
+    "location_id": 324,
+    "avg_volume": 8618.444444444445,
+    "max_volume": 10892,
+    "avg_speed": 41.03222222222222,
+    "measurements": 9
+  },
+  {
+    "sensor_id": 19993,
+    "location_id": 1533,
+    "avg_volume": 8615.916666666666,
+    "max_volume": 10714,
+    "avg_speed": 35.41583333333333,
+    "measurements": 12
+  },
+  {
+    "sensor_id": 15375,
+    "location_id": 397,
+    "avg_volume": 8609.57142857143,
+    "max_volume": 10921,
+    "avg_speed": 41.87142857142857,
+    "measurements": 14
+  },
+  {
+    "sensor_id": 8141,
+    "location_id": 139,
+    "avg_volume": 8592.272727272728,
+    "max_volume": 10701,
+    "avg_speed": 38.13818181818182,
+    "measurements": 11
+  }
+]

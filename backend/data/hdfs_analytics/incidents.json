@@ -1,0 +1,72 @@
+[
+  {
+    "sensor_id": 374,
+    "incident_detected": 1,
+    "total_records": 2550,
+    "avg_volume": 5122.009411764706,
+    "avg_speed": 60.186690196078466
+  },
+  {
+    "sensor_id": 16407,
+    "incident_detected": 1,
+    "total_records": 2561,
+    "avg_volume": 5089.108941819602,
+    "avg_speed": 60.20377196407653
+  },
+  {
+    "sensor_id": 7852,
+    "incident_detected": 1,
+    "total_records": 2479,
+    "avg_volume": 5088.671238402581,
+    "avg_speed": 60.159451391690254
+  },
+  {
+    "sensor_id": 2267,
+    "incident_detected": 1,
+    "total_records": 2487,
+    "avg_volume": 5087.00321672698,
+    "avg_speed": 60.08915158825899
+  },
+  {
+    "sensor_id": 15655,
+    "incident_detected": 1,
+    "total_records": 2455,
+    "avg_volume": 5082.936456211813,
+    "avg_speed": 60.45954378818736
+  },
+  {
+    "sensor_id": 1215,
+    "incident_detected": 1,
+    "total_records": 2464,
+    "avg_volume": 5079.507305194805,
+    "avg_speed": 60.16372564935065
+  },
+  {
+    "sensor_id": 278,
+    "incident_detected": 1,
+    "total_records": 2496,
+    "avg_volume": 5077.484375,
+    "avg_speed": 60.198433493589796
+  },
+  {
+    "sensor_id": 14496,
+    "incident_detected": 1,
+    "total_records": 2451,
+    "avg_volume": 5072.1468788249695,
+    "avg_speed": 60.535238678090586
+  },
+  {
+    "sensor_id": 15039,
+    "incident_detected": 1,
+    "total_records": 2461,
+    "avg_volume": 5068.908167411621,
+    "avg_speed": 60.71529459569284
+  },
+  {
+    "sensor_id": 12601,
+    "incident_detected": 1,
+    "total_records": 2573,
+    "avg_volume": 5064.203653322969,
+    "avg_speed": 60.41240186552656
+  }
+]

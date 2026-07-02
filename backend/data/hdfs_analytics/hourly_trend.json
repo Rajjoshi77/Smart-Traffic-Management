@@ -1,0 +1,146 @@
+[
+  {
+    "hour": 0,
+    "avg_volume": 1249.451434251841,
+    "avg_speed": 79.99916161006534,
+    "congestion_percentage": 0.0
+  },
+  {
+    "hour": 1,
+    "avg_volume": 1249.6587538614344,
+    "avg_speed": 79.99731624903728,
+    "congestion_percentage": 0.0
+  },
+  {
+    "hour": 2,
+    "avg_volume": 1249.5392047192313,
+    "avg_speed": 79.99710415468398,
+    "congestion_percentage": 0.0
+  },
+  {
+    "hour": 3,
+    "avg_volume": 1249.6304479058554,
+    "avg_speed": 80.00099973500963,
+    "congestion_percentage": 0.0
+  },
+  {
+    "hour": 4,
+    "avg_volume": 1249.487119828764,
+    "avg_speed": 80.00198623539877,
+    "congestion_percentage": 0.0
+  },
+  {
+    "hour": 5,
+    "avg_volume": 1249.4414813058083,
+    "avg_speed": 80.00137858459699,
+    "congestion_percentage": 0.0
+  },
+  {
+    "hour": 6,
+    "avg_volume": 4249.490712812586,
+    "avg_speed": 72.86441942243536,
+    "congestion_percentage": 0.0
+  },
+  {
+    "hour": 7,
+    "avg_volume": 8749.46665752464,
+    "avg_speed": 35.01053407480601,
+    "congestion_percentage": 99.96012628964056
+  },
+  {
+    "hour": 8,
+    "avg_volume": 8749.473574659558,
+    "avg_speed": 35.011611156482424,
+    "congestion_percentage": 99.95992071030928
+  },
+  {
+    "hour": 9,
+    "avg_volume": 8749.439217867099,
+    "avg_speed": 35.01059826733748,
+    "congestion_percentage": 99.96032068660307
+  },
+  {
+    "hour": 10,
+    "avg_volume": 4249.771241026749,
+    "avg_speed": 72.86257377278565,
+    "congestion_percentage": 0.0
+  },
+  {
+    "hour": 11,
+    "avg_volume": 4249.766349877626,
+    "avg_speed": 72.8639570941281,
+    "congestion_percentage": 0.0
+  },
+  {
+    "hour": 12,
+    "avg_volume": 5499.459821757939,
+    "avg_speed": 61.26409323288726,
+    "congestion_percentage": 0.0
+  },
+  {
+    "hour": 13,
+    "avg_volume": 5499.669874720823,
+    "avg_speed": 61.25998049747797,
+    "congestion_percentage": 0.0
+  },
+  {
+    "hour": 14,
+    "avg_volume": 5499.461373147763,
+    "avg_speed": 61.26351180911267,
+    "congestion_percentage": 0.0
+  },
+  {
+    "hour": 15,
+    "avg_volume": 4249.303761972592,
+    "avg_speed": 72.86502448087819,
+    "congestion_percentage": 0.0
+  },
+  {
+    "hour": 16,
+    "avg_volume": 9499.418155476342,
+    "avg_speed": 30.007974313791056,
+    "congestion_percentage": 100.0
+  },
+  {
+    "hour": 17,
+    "avg_volume": 9499.41561232645,
+    "avg_speed": 30.009275784773422,
+    "congestion_percentage": 100.0
+  },
+  {
+    "hour": 18,
+    "avg_volume": 9499.543419067051,
+    "avg_speed": 30.007147187953937,
+    "congestion_percentage": 100.0
+  },
+  {
+    "hour": 19,
+    "avg_volume": 9499.45052600582,
+    "avg_speed": 30.007962144860628,
+    "congestion_percentage": 100.0
+  },
+  {
+    "hour": 20,
+    "avg_volume": 4249.325581659911,
+    "avg_speed": 72.86235443429932,
+    "congestion_percentage": 0.0
+  },
+  {
+    "hour": 21,
+    "avg_volume": 4249.201891668466,
+    "avg_speed": 72.86805186127904,
+    "congestion_percentage": 0.0
+  },
+  {
+    "hour": 22,
+    "avg_volume": 1249.620153082082,
+    "avg_speed": 80.00036715591244,
+    "congestion_percentage": 0.0
+  },
+  {
+    "hour": 23,
+    "avg_volume": 1249.5485667756147,
+    "avg_speed": 80.00050314051258,
+    "congestion_percentage": 0.0
+  }
+]

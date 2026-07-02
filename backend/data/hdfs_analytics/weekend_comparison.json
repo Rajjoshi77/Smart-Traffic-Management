@@ -1,0 +1,290 @@
+[
+  {
+    "is_weekend": 0,
+    "hour": 0,
+    "avg_volume": 1249.54272756303,
+    "avg_speed": 80.00099235119295
+  },
+  {
+    "is_weekend": 0,
+    "hour": 1,
+    "avg_volume": 1249.6821560425433,
+    "avg_speed": 79.99607307449102
+  },
+  {
+    "is_weekend": 0,
+    "hour": 2,
+    "avg_volume": 1249.5335114868303,
+    "avg_speed": 79.99824458395506
+  },
+  {
+    "is_weekend": 0,
+    "hour": 3,
+    "avg_volume": 1249.595191493094,
+    "avg_speed": 79.99737468675936
+  },
+  {
+    "is_weekend": 0,
+    "hour": 4,
+    "avg_volume": 1249.511804726058,
+    "avg_speed": 80.00303742469566
+  },
+  {
+    "is_weekend": 0,
+    "hour": 5,
+    "avg_volume": 1249.4389709290767,
+    "avg_speed": 79.99986818485314
+  },
+  {
+    "is_weekend": 0,
+    "hour": 6,
+    "avg_volume": 4249.581985890977,
+    "avg_speed": 72.86406889616065
+  },
+  {
+    "is_weekend": 0,
+    "hour": 7,
+    "avg_volume": 8749.420335401192,
+    "avg_speed": 35.01128990487613
+  },
+  {
+    "is_weekend": 0,
+    "hour": 8,
+    "avg_volume": 8749.494534872212,
+    "avg_speed": 35.01164630368482
+  },
+  {
+    "is_weekend": 0,
+    "hour": 9,
+    "avg_volume": 8749.460833847812,
+    "avg_speed": 35.01035081765017
+  },
+  {
+    "is_weekend": 0,
+    "hour": 10,
+    "avg_volume": 4249.7517958956105,
+    "avg_speed": 72.8631236378895
+  },
+  {
+    "is_weekend": 0,
+    "hour": 11,
+    "avg_volume": 4249.824757332553,
+    "avg_speed": 72.86207173195004
+  },
+  {
+    "is_weekend": 0,
+    "hour": 12,
+    "avg_volume": 5499.4374294287845,
+    "avg_speed": 61.26418244171864
+  },
+  {
+    "is_weekend": 0,
+    "hour": 13,
+    "avg_volume": 5499.672774570595,
+    "avg_speed": 61.2580327857011
+  },
+  {
+    "is_weekend": 0,
+    "hour": 14,
+    "avg_volume": 5499.33420352966,
+    "avg_speed": 61.26604954596209
+  },
+  {
+    "is_weekend": 0,
+    "hour": 15,
+    "avg_volume": 4249.439927071221,
+    "avg_speed": 72.86470780915917
+  },
+  {
+    "is_weekend": 0,
+    "hour": 16,
+    "avg_volume": 9499.40633563446,
+    "avg_speed": 30.00722974038295
+  },
+  {
+    "is_weekend": 0,
+    "hour": 17,
+    "avg_volume": 9499.371598468799,
+    "avg_speed": 30.008630271869137
+  },
+  {
+    "is_weekend": 0,
+    "hour": 18,
+    "avg_volume": 9499.764372390262,
+    "avg_speed": 30.00607103144413
+  },
+  {
+    "is_weekend": 0,
+    "hour": 19,
+    "avg_volume": 9499.350465464633,
+    "avg_speed": 30.007403952775764
+  },
+  {
+    "is_weekend": 0,
+    "hour": 20,
+    "avg_volume": 4249.36340664116,
+    "avg_speed": 72.86256074975951
+  },
+  {
+    "is_weekend": 0,
+    "hour": 21,
+    "avg_volume": 4249.385763017238,
+    "avg_speed": 72.86819314210365
+  },
+  {
+    "is_weekend": 0,
+    "hour": 22,
+    "avg_volume": 1249.6220902651612,
+    "avg_speed": 79.99803465825411
+  },
+  {
+    "is_weekend": 0,
+    "hour": 23,
+    "avg_volume": 1249.5361232026323,
+    "avg_speed": 79.99928798029352
+  },
+  {
+    "is_weekend": 1,
+    "hour": 0,
+    "avg_volume": 1249.2232091427538,
+    "avg_speed": 79.99458492106037
+  },
+  {
+    "is_weekend": 1,
+    "hour": 1,
+    "avg_volume": 1249.600234813322,
+    "avg_speed": 80.00042490761693
+  },
+  {
+    "is_weekend": 1,
+    "hour": 2,
+    "avg_volume": 1249.5534279790372,
+    "avg_speed": 79.9942550488214
+  },
+  {
+    "is_weekend": 1,
+    "hour": 3,
+    "avg_volume": 1249.7185784091778,
+    "avg_speed": 80.01006127309121
+  },
+  {
+    "is_weekend": 1,
+    "hour": 4,
+    "avg_volume": 1249.4254605257026,
+    "avg_speed": 79.9993605165769
+  },
+  {
+    "is_weekend": 1,
+    "hour": 5,
+    "avg_volume": 1249.4477596265035,
+    "avg_speed": 80.00515601523136
+  },
+  {
+    "is_weekend": 1,
+    "hour": 6,
+    "avg_volume": 4249.262451277173,
+    "avg_speed": 72.86529604089806
+  },
+  {
+    "is_weekend": 1,
+    "hour": 7,
+    "avg_volume": 8749.582467541908,
+    "avg_speed": 35.008644422800536
+  },
+  {
+    "is_weekend": 1,
+    "hour": 8,
+    "avg_volume": 8749.421200636554,
+    "avg_speed": 35.01152333292741
+  },
+  {
+    "is_weekend": 1,
+    "hour": 9,
+    "avg_volume": 8749.38518180398,
+    "avg_speed": 35.0112168470401
+  },
+  {
+    "is_weekend": 1,
+    "hour": 10,
+    "avg_volume": 4249.819841831358,
+    "avg_speed": 72.86119945001622
+  },
+  {
+    "is_weekend": 1,
+    "hour": 11,
+    "avg_volume": 4249.620310156759,
+    "avg_speed": 72.8686711801394
+  },
+  {
+    "is_weekend": 1,
+    "hour": 12,
+    "avg_volume": 5499.515806729622,
+    "avg_speed": 61.263870194280614
+  },
+  {
+    "is_weekend": 1,
+    "hour": 13,
+    "avg_volume": 5499.662624910175,
+    "avg_speed": 61.26484990199541
+  },
+  {
+    "is_weekend": 1,
+    "hour": 14,
+    "avg_volume": 5499.7793218024235,
+    "avg_speed": 61.257166975895274
+  },
+  {
+    "is_weekend": 1,
+    "hour": 15,
+    "avg_volume": 4248.963479897407,
+    "avg_speed": 72.86581585628001
+  },
+  {
+    "is_weekend": 1,
+    "hour": 16,
+    "avg_volume": 9499.447695369003,
+    "avg_speed": 30.00983513551556
+  },
+  {
+    "is_weekend": 1,
+    "hour": 17,
+    "avg_volume": 9499.525688490468,
+    "avg_speed": 30.010890175970214
+  },
+  {
+    "is_weekend": 1,
+    "hour": 18,
+    "avg_volume": 9498.99090653718,
+    "avg_speed": 30.009838208605494
+  },
+  {
+    "is_weekend": 1,
+    "hour": 19,
+    "avg_volume": 9499.700573896127,
+    "avg_speed": 30.009357047901773
+  },
+  {
+    "is_weekend": 1,
+    "hour": 20,
+    "avg_volume": 4249.231038700171,
+    "avg_speed": 72.86183875197543
+  },
+  {
+    "is_weekend": 1,
+    "hour": 21,
+    "avg_volume": 4248.7422376223885,
+    "avg_speed": 72.86769867790811
+  },
+  {
+    "is_weekend": 1,
+    "hour": 22,
+    "avg_volume": 1249.6153100872048,
+    "avg_speed": 80.00619844482469
+  },
+  {
+    "is_weekend": 1,
+    "hour": 23,
+    "avg_volume": 1249.579674701081,
+    "avg_speed": 80.003540942724
+  }
+]

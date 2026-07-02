@@ -1,0 +1,194 @@
+[
+  {
+    "hour": 18,
+    "avg_volume": 9499.543419067051,
+    "max_volume": 10999,
+    "min_volume": 8000,
+    "stddev_volume": 866.0118684002565,
+    "record_count": 41671508
+  },
+  {
+    "hour": 19,
+    "avg_volume": 9499.45052600582,
+    "max_volume": 10999,
+    "min_volume": 8000,
+    "stddev_volume": 866.0227642073904,
+    "record_count": 41667790
+  },
+  {
+    "hour": 16,
+    "avg_volume": 9499.418155476342,
+    "max_volume": 10999,
+    "min_volume": 8000,
+    "stddev_volume": 865.9723635496783,
+    "record_count": 41666172
+  },
+  {
+    "hour": 17,
+    "avg_volume": 9499.41561232645,
+    "max_volume": 10999,
+    "min_volume": 8000,
+    "stddev_volume": 865.9846792088044,
+    "record_count": 41662311
+  },
+  {
+    "hour": 8,
+    "avg_volume": 8749.473574659558,
+    "max_volume": 9999,
+    "min_volume": 7500,
+    "stddev_volume": 721.7331640030139,
+    "record_count": 41662415
+  },
+  {
+    "hour": 7,
+    "avg_volume": 8749.46665752464,
+    "max_volume": 9999,
+    "min_volume": 7500,
+    "stddev_volume": 721.6995053814857,
+    "record_count": 41646488
+  },
+  {
+    "hour": 9,
+    "avg_volume": 8749.439217867099,
+    "max_volume": 9999,
+    "min_volume": 7500,
+    "stddev_volume": 721.624551557284,
+    "record_count": 41671588
+  },
+  {
+    "hour": 13,
+    "avg_volume": 5499.669874720823,
+    "max_volume": 6499,
+    "min_volume": 4500,
+    "stddev_volume": 577.3159389119853,
+    "record_count": 41668457
+  },
+  {
+    "hour": 14,
+    "avg_volume": 5499.461373147763,
+    "max_volume": 6499,
+    "min_volume": 4500,
+    "stddev_volume": 577.3476981849592,
+    "record_count": 41673199
+  },
+  {
+    "hour": 12,
+    "avg_volume": 5499.459821757939,
+    "max_volume": 6499,
+    "min_volume": 4500,
+    "stddev_volume": 577.345257487798,
+    "record_count": 41665362
+  },
+  {
+    "hour": 10,
+    "avg_volume": 4249.771241026749,
+    "max_volume": 5999,
+    "min_volume": 2500,
+    "stddev_volume": 1010.4055223088789,
+    "record_count": 41665500
+  },
+  {
+    "hour": 11,
+    "avg_volume": 4249.766349877626,
+    "max_volume": 5999,
+    "min_volume": 2500,
+    "stddev_volume": 1010.369915021554,
+    "record_count": 41668003
+  },
+  {
+    "hour": 6,
+    "avg_volume": 4249.490712812586,
+    "max_volume": 5999,
+    "min_volume": 2500,
+    "stddev_volume": 1010.271707163251,
+    "record_count": 41672735
+  },
+  {
+    "hour": 20,
+    "avg_volume": 4249.325581659911,
+    "max_volume": 5999,
+    "min_volume": 2500,
+    "stddev_volume": 1010.2543343301645,
+    "record_count": 41665928
+  },
+  {
+    "hour": 15,
+    "avg_volume": 4249.303761972592,
+    "max_volume": 5999,
+    "min_volume": 2500,
+    "stddev_volume": 1010.4129525700146,
+    "record_count": 41660883
+  },
+  {
+    "hour": 21,
+    "avg_volume": 4249.201891668466,
+    "max_volume": 5999,
+    "min_volume": 2500,
+    "stddev_volume": 1010.2450848340472,
+    "record_count": 41665652
+  },
+  {
+    "hour": 1,
+    "avg_volume": 1249.6587538614344,
+    "max_volume": 1999,
+    "min_volume": 500,
+    "stddev_volume": 432.9852550180545,
+    "record_count": 41673632
+  },
+  {
+    "hour": 3,
+    "avg_volume": 1249.6304479058554,
+    "max_volume": 1999,
+    "min_volume": 500,
+    "stddev_volume": 433.0205322413501,
+    "record_count": 41661880
+  },
+  {
+    "hour": 22,
+    "avg_volume": 1249.620153082082,
+    "max_volume": 1999,
+    "min_volume": 500,
+    "stddev_volume": 433.0408532763615,
+    "record_count": 41670063
+  },
+  {
+    "hour": 23,
+    "avg_volume": 1249.5485667756147,
+    "max_volume": 1999,
+    "min_volume": 500,
+    "stddev_volume": 433.0530176312159,
+    "record_count": 41670586
+  },
+  {
+    "hour": 2,
+    "avg_volume": 1249.5392047192313,
+    "max_volume": 1999,
+    "min_volume": 500,
+    "stddev_volume": 432.95788448588445,
+    "record_count": 41661362
+  },
+  {
+    "hour": 4,
+    "avg_volume": 1249.487119828764,
+    "max_volume": 1999,
+    "min_volume": 500,
+    "stddev_volume": 433.018688926033,
+    "record_count": 41664120
+  },
+  {
+    "hour": 0,
+    "avg_volume": 1249.451434251841,
+    "max_volume": 1999,
+    "min_volume": 500,
+    "stddev_volume": 432.9808645111856,
+    "record_count": 41676049
+  },
+  {
+    "hour": 5,
+    "avg_volume": 1249.4414813058083,
+    "max_volume": 1999,
+    "min_volume": 500,
+    "stddev_volume": 432.9776147940539,
+    "record_count": 41668317
+  }
+]

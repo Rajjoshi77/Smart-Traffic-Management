@@ -1,0 +1,37 @@
+[
+  {
+    "summary": "count",
+    "traffic_volume": "1000000000",
+    "average_speed": "1000000000",
+    "adjusted_traffic": "1000000000",
+    "weather_impact": "1000000000"
+  },
+  {
+    "summary": "mean",
+    "traffic_volume": "4843.140263859",
+    "average_speed": "61.918944994140176",
+    "adjusted_traffic": "5811.556652363",
+    "weather_impact": "1.2000000000000033"
+  },
+  {
+    "summary": "stddev",
+    "traffic_volume": "3242.977210102378",
+    "average_speed": "23.53428102855672",
+    "adjusted_traffic": "4045.667750956579",
+    "weather_impact": "0.18973665970496495"
+  },
+  {
+    "summary": "min",
+    "traffic_volume": "500",
+    "average_speed": "20.0",
+    "adjusted_traffic": "500",
+    "weather_impact": "1.0"
+  },
+  {
+    "summary": "max",
+    "traffic_volume": "10999",
+    "average_speed": "100.0",
+    "adjusted_traffic": "16498",
+    "weather_impact": "1.5"
+  }
+]
